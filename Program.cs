@@ -29,7 +29,7 @@ app.MapGet("/v1/todos/{id}/done", async (AppDbContext context, Guid id) => {
 
         return Results.Ok(todo);
     }
-    catch (Exception exception) {
+    catch (Exception) {
         return Results.StatusCode(500);
     }
 });
@@ -53,7 +53,7 @@ app.MapPost("v1/todos", (AppDbContext context, CreateTodoViewModel model) => {
 
         return Results.Created($"/v1/todos/{todo.Id}", todo);
     }
-    catch (Exception exception) {
+    catch (Exception) {
         return Results.StatusCode(500);
     }
 });
@@ -78,7 +78,7 @@ app.MapPut("v1/todos/{id}", async (AppDbContext context, UpdateTodoViewModel mod
 
         return Results.Ok(todo);
     }
-    catch (Exception exception) {
+    catch (Exception) {
         return Results.StatusCode(500);
     }
 });
@@ -98,7 +98,7 @@ app.MapDelete("v1/todos/{id}", async (AppDbContext context, Guid id) => {
 
         return Results.Ok();
     }
-    catch (Exception exception) {
+    catch (Exception) {
         return Results.StatusCode(500);
     }
 });

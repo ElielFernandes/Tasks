@@ -475,3 +475,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Jetbrains editors (PHPStorm, etc)
+.idea/
+*.iml
